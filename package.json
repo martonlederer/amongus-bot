@@ -1,6 +1,6 @@
 {
   "name": "amongus-bot",
-  "version": "1.0.0",
+  "version": "0.0.3",
   "description": "A bot for our school among us server",
   "main": "dist/app.js",
   "repository": "https://github.com/martonlederer/amongus-bot",
