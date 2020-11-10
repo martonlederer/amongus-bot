@@ -11,7 +11,7 @@ export enum MessageType {
   INFO = 'Info'
 }
 
-export type CommandFunction = (data: Message, client: Client) => void
+export type CommandFunction = (args: string[], data: Message, client: Client) => void
 
 export interface ICommand {
   command: CommandFunction

@@ -26,7 +26,10 @@
     "yorkie": "^2.0.0"
   },
   "dependencies": {
+    "@discordjs/opus": "^0.3.3",
     "discord.js": "^12.4.1",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "ytdl-core": "^4.0.3",
+    "ytdl-core-discord": "^1.2.4"
   }
 }

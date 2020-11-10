@@ -1,7 +1,7 @@
 import { CommandFunction, MessageType } from '../../types'
 import sendMessage from '../../communicator'
 
-const JoinCommand: CommandFunction = async (data, client) => {
+const JoinCommand: CommandFunction = async (args, data, client) => {
   if (!data.guild) return
   if (data.member.voice.channel) {
     const connection = await data.member.voice.channel.join()
