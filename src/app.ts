@@ -17,7 +17,7 @@ client.on('ready', () => {
 client.on('message', (msg) => {
   if (msg.author.tag === client.user.tag) return
   if (!msg.content.startsWith(config.prefix)) return
-  command(msg.content.replace(new RegExp('^\\' + config.prefix), ''), msg)
+  command(msg.content.replace(new RegExp('^\\' + config.prefix), ''), msg, client)
 })
 
 client.login(process.env.TOKEN)

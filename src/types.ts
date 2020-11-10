@@ -1,4 +1,4 @@
-import { Message } from 'discord.js'
+import { Message, Client } from 'discord.js'
 
 export interface ICommands {
   [key: string]: CommandFunction
@@ -11,4 +11,4 @@ export enum MessageType {
   INFO = 'Info'
 }
 
-export type CommandFunction = (data: Message) => void
+export type CommandFunction = (data: Message, client: Client) => void
