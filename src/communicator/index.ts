@@ -5,7 +5,7 @@ export default async function sendMessage(
   msg: string,
   messageType: MessageType,
   channel: TextChannel | DMChannel | NewsChannel,
-  timeout: number
+  timeout?: number
 ) {
   const embedMessage = new MessageEmbed()
     .setTitle(messageType)
@@ -21,5 +21,5 @@ export default async function sendMessage(
     )
   const message = await channel.send(embedMessage)
 
-  setTimeout(() => channel.messages.delete(message), timeout)
+  if (timeout !== undefined) setTimeout(() => channel.messages.delete(message), timeout)
 }
