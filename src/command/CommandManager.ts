@@ -7,7 +7,7 @@ import { Client } from 'discord.js'
 import JoinCommand from './commands/JoinCommand'
 import LeaveCommand from './commands/LeaveCommand'
 import HelpCommand from './commands/HelpCommand'
-import { PlayCommand, StopCommand, ResumeCommand } from './commands/MusicCommands'
+import { PlayCommand, StopCommand, ResumeCommand, QueueCommand } from './commands/MusicCommands'
 
 export function command(cmd: string, data: Message, client: Client) {
   if (commands[cmd.split(' ')[0]] === undefined)
@@ -44,5 +44,9 @@ export const commands: ICommands = {
   resume: {
     command: ResumeCommand,
     description: 'Continue playing the current song'
+  },
+  queue: {
+    command: QueueCommand,
+    description: 'Show queue list'
   }
 }
