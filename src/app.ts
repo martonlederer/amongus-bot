@@ -12,6 +12,7 @@ const client = new Client(),
 
 client.on('ready', () => {
   console.log(`Started bot. Tag: ${client.user.tag}`)
+  client.user.setActivity(`${config.prefix}help`, { url: 'https://marton.lederer.hu', type: 'LISTENING' })
 })
 
 client.on('message', (msg) => {
